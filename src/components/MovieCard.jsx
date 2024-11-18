@@ -1,12 +1,15 @@
-import {Link} from 'react-router-dom';
+// src/components/MovieCard.jsx
+// src/components/MovieCard.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link
 
-function MovieCard({title}) {
-  
+const MovieCard = ({ movie }) => {
   return (
-    <article>
-        <h2>{title}</h2>
-        {/* What should go here? */}
-    </article>
+    <div className="movie-card">
+      <h3>{movie.title}</h3>
+      <p>{movie.time} minutes</p>
+      <Link to={`/movie/${movie.id}`}>View Details</Link> {/* Dynamic Link */}
+    </div>
   );
 };
 
